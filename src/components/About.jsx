@@ -33,6 +33,39 @@ const About = () => {
 
         {/* Team Members with animation */}
         <div className="flex flex-col md:flex-row gap-12 items-center justify-center">
+
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <img
+              src="https://pbs.twimg.com/profile_images/1852061272352919553/pkW1ua9A_400x400.jpg"
+              className="h-32 w-32 md:h-44 md:w-44 rounded-full object-cover"
+              alt="Karan K."
+            />
+            <p className="mt-4 font-semibold">Karan K.</p>
+            <div className="flex gap-4 mt-4">
+              <a
+                href="https://x.com/Kendre_Karan01"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700"
+              >
+                <FaSquareXTwitter className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kendrekaran/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700"
+              >
+                <FaLinkedin className="h-6 w-6" />
+              </a>
+            </div>
+          </motion.div>
+          
           {/* Yashwardhan */}
           <motion.div
             className="flex flex-col items-center"
@@ -99,38 +132,8 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Karan */}
-          <motion.div
-            className="flex flex-col items-center"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <img
-              src="https://pbs.twimg.com/profile_images/1852061272352919553/pkW1ua9A_400x400.jpg"
-              className="h-32 w-32 md:h-44 md:w-44 rounded-full object-cover"
-              alt="Karan K."
-            />
-            <p className="mt-4 font-semibold">Karan K.</p>
-            <div className="flex gap-4 mt-4">
-              <a
-                href="https://x.com/Kendre_Karan01"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
-              >
-                <FaSquareXTwitter className="h-6 w-6" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/kendrekaran/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
-              >
-                <FaLinkedin className="h-6 w-6" />
-              </a>
-            </div>
-          </motion.div>
+         
+          
         </div>
       </div>
     </section>
