@@ -37,7 +37,6 @@ body {
     color: #f8f8f2;
     opacity: 0; /* Fade-in effect on load */
     transition: opacity 0.5s ease-in-out;
-    font-family: "Vercetti";
     background-color: #0b011d;
   }
 
