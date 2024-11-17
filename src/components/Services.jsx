@@ -31,7 +31,7 @@ const CardContent = ({ children }) => (
 
 export default function Services() {
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 flex flex-col items-center justify-center md:pl-20 md:h-screen">
+    <div id="services" className="mx-auto max-w-7xl px-4 py-8 flex flex-col items-center justify-center md:pl-20 md:h-screen">
       {/* Animated Heading */}
       <motion.h2
         className="text-4xl lg:text-7xl font-bold mb-12 text-center"
