@@ -9,22 +9,22 @@ const Home = () => {
 
   // Framer Motion variants for animations
   const textVariant = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1, staggerChildren: 0.3 } },
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.5, staggerChildren: 0.2 } },
   };
 
   const imgVariant = {
-    hidden: { opacity: 0, x: 20 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1.2 } },
+    hidden: { opacity: 0, x: 40 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1.5 } },
   };
 
   const btnVariant = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1.2, delay: 0.8 } },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.5} },
   };
 
   return (
-    <section id="home" className="h-[90vh] relative flex flex-col items-center justify-center  p-6 pt-0 md:p-20 xl:items-start">
+    <section id="home" className="h-[90vh] flex flex-col items-center justify-center p-6 pt-0 md:p-20 xl:items-start font-poppins">
       {/* Particles background */}
       <Particles
         id="tsparticles"
@@ -47,24 +47,31 @@ const Home = () => {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16 lg:gap-24 mt-4md:mt-0 xl:gap-72">
+      <div className="relative z-10 flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16 lg:gap-24 mt-4 md:mt-0 xl:gap-72">
         {/* Text Section */}
         <motion.div
           className="text-center md:text-left flex flex-col items-center md:items-start"
           variants={textVariant}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
-          <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#d7d5db]">
+          <motion.h1
+          whileInView="visible"
+           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#d7d5db]">
             Bringing Your <br /> <span className='text-purple-400'>Designs</span> to Life
           </motion.h1>
-          <motion.p className="pt-6 text-gray-400 text-sm" variants={textVariant}>
+          <motion.p 
+          whileInView="visible"
+          className="pt-6 text-gray-400 text-sm" variants={textVariant}>
             Expert frontend developers specializing in creating high-quality, responsive <br />
             websites from your designs. Fast, pixel-perfect, and fully functional.
           </motion.p>
 
           {/* Typewriter Effect */}
-          <motion.div className="text-sm sm:text-lg mt-5 text-gray-200" variants={textVariant}>
+          <motion.div
+          whileInView="visible"
+           className="text-sm sm:text-lg mt-5 text-gray-200" variants={textVariant}>
             <Typewriter
               options={{
                 strings: [
@@ -79,7 +86,7 @@ const Home = () => {
           </motion.div>
 
           <a href="#contact" onClick={() => setActiveNav("#contact")} className={activeNav === "#contact" ? "active" : ""}>
-            <motion.div variants={btnVariant}>
+            <motion.div variants={btnVariant} whileInView="visible" initial="hidden">
               <Button className="text-black bg-white rounded-full mt-8 hover:bg-purple-400 hover:text-white">
                 Hire us
               </Button>
@@ -92,7 +99,8 @@ const Home = () => {
           className="flex justify-center md:justify-end"
           variants={imgVariant}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           <img
             src="https://i.pinimg.com/736x/7b/20/d5/7b20d5c6cadab61670a2d915263a6b00.jpg"
