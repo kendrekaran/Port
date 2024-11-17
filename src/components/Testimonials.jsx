@@ -32,7 +32,7 @@ const Dashboard = () => {
 
   return (
     <Fragment >
-      <section id="services" className="h-[80vh] flex flex-col items-center justify-center w-full mx-auto py-10 xl:py-20  sm:p-4 ">
+      <section className="h-[80vh] flex flex-col items-center justify-center w-full mx-auto py-10 xl:py-20  sm:p-4 ">
         {/* Title */}
         <div className="text-center">
           <h2 className="flex items-center justify-center text-3xl sm:text-5xl  font-bold capitalize">
